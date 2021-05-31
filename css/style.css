@@ -127,7 +127,7 @@ main {
     height: 600px;
     border-radius: 0 10px 10px 0;
 
-    background: url("/images/image-header-desktop.jpg") right center no-repeat;
+    background: url("../images/image-header-desktop.jpg") right center no-repeat;
     background-size: cover;
   }
   .image-header::before {
@@ -184,7 +184,7 @@ main {
     margin-bottom: 2rem;
     border-radius: 10px 10px 0 0;
 
-    background: url("/images/image-header-mobile.jpg") top center no-repeat;
+    background: url("../images/image-header-mobile.jpg") top center no-repeat;
     background-size: cover;
   }
   .image-header::before {
