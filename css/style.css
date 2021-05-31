@@ -20,6 +20,7 @@ html {
 }
 
 body {
+  width: 100%;
   height: 100vh;
   background-color: var(--bg-dark-blue);
   font-family: 'Inter', sans-serif;
@@ -43,9 +44,6 @@ main {
 /* Image =================================== */
 .image-header {
   position: relative;
-  
-  background: url("/images/image-header-mobile.jpg") center center no-repeat;
-  background-size: cover;
 }
 
 .image-header::before {
@@ -59,6 +57,9 @@ main {
 }
 
 /* Content =================================== */
+.content-wrapper {
+  width: 100%;
+}
 .content > h1 {
   color: var(--white);
 }
@@ -72,13 +73,15 @@ main {
   line-height: 1.5rem;
 }
 
-.content > .stats {
+.content > .stats-wrapper {
+  width: 100%;
   font-family: 'Inter', sans-serif;
   color: var(--light-gray);
 }
 
 .stats > .stats-number {
   color: var(--white);
+  font-weight: 700;
 }
 
 .stats > .stats-name {
@@ -87,8 +90,66 @@ main {
   letter-spacing: 1.5px;
 }
 
+/* Desktop Screen =================================== */
+@media (min-width: 651px) {
+  #card {
+    width: min(100vw, 1000px);
+    margin: 0 2rem;
+    display: flex;
+  }
+  .image-header {
+    order: 1;
+    width: 100%;
+    height: 600px;
+    border-radius: 0 10px 10px 0;
+
+    background: url("/images/image-header-desktop.jpg") right center no-repeat;
+    background-size: cover;
+  }
+  .image-header::before {
+    border-radius: 0 10px 10px 0;
+  }
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin-left: 1rem;
+  }
+  .content > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .content > p {
+    font-size: 1.1rem;
+    margin-bottom: 6rem;
+  }
+  .stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .stats {
+    margin: 0 1rem 1rem 1rem;
+  }
+  .stats > .stats-number {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+  }
+  .stats > .stats-name {
+    font-size: 1rem;
+  }
+}
+
 /* Mobile Screen =================================== */
-@media (max-width: 425px) {
+@media (max-width: 650px) {
   #card {
     width: 85%;
     margin: 3rem 0;
@@ -98,6 +159,9 @@ main {
     height: 250px;
     margin-bottom: 2rem;
     border-radius: 10px 10px 0 0;
+
+    background: url("/images/image-header-mobile.jpg") top center no-repeat;
+    background-size: cover;
   }
   .image-header::before {
     border-radius: 10px 10px 0 0;
@@ -122,7 +186,6 @@ main {
   }
   .stats > .stats-number {
     font-size: 1.5rem;
-    color: var(--white);
     font-weight: 700;
     margin-bottom: .5rem;
   }
