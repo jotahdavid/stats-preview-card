@@ -1,0 +1,19 @@
+/* Global Settings =================================== */
+:root {
+  --bg-dark-blue: #090b1a;
+  --dark-blue: #1b1938;
+  --violet: #aa5cdb;
+  --white: #ffffff;
+  --light-gray: #ffffffbf;
+  --dark-gray: #ffffff99;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 375px) {
+  
+}
