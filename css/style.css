@@ -6,7 +6,6 @@
   --dark-blue: #1b1938;
   --violet: #aa5cdb;
   --white: #ffffff;
-  --light-gray: #ffffffbf;
   --dark-gray: #ffffff99;
 }
 
@@ -16,6 +15,91 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 93.75%;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-dark-blue);
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card =================================== */
+#card {
+  background-color: var(--dark-blue);
+}
+
+/* Image =================================== */
+.image-wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content =================================== */
+.content > h1 {
+  color: var(--white);
+}
+
+.content > p {
+  color: var(--dark-gray);
+  line-height: 1.5rem;
+}
+
+.content > .stats {
+  font-family: 'Inter', sans-serif;
+  color: var(--light-gray);
+}
+
+.stats > .stats-number {
+  color: var(--white);
+}
+
+.stats > .stats-name {
+  color: var(--dark-gray);
+  text-transform: uppercase;
+}
+
+/* Mobile Screen =================================== */
 @media (max-width: 375px) {
-  
+  #card {
+    width: 88%;
+    height: 85vh;
+  }
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .content > h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .content > p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .stats {
+    text-align: center;
+  }
+  .stats > .stats-number {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 700;
+  }
+  .stats > .stats-name {
+    font-size: .8rem;
+  }
 }
