@@ -5,6 +5,7 @@
   --bg-dark-blue: #090b1a;
   --dark-blue: #1b1938;
   --violet: #aa5cdb;
+  --purple: #530d7e;
   --white: #ffffff;
   --dark-gray: #ffffff99;
 }
@@ -53,7 +54,7 @@ main {
   height: 100%;
   position: absolute;
   opacity: .6;
-  background-color: rgb(83, 13, 126);
+  background-color: var(--purple);
 }
 
 /* Content =================================== */
@@ -88,6 +89,29 @@ main {
   color: var(--dark-gray);
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+
+/* Attribution =================================== */
+.attribution {
+  background-color: var(--white);
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.attribution a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.attribution i {
+  font-size: 1.5rem;
 }
 
 /* Desktop Screen =================================== */
