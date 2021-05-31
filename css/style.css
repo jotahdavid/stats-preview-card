@@ -40,14 +40,32 @@ main {
 }
 
 /* Image =================================== */
-.image-wrapper > img {
+.image-header {
+  width: 100%;
+  height: 35%;
+  position: relative;
+  
+  background: url("/images/image-header-mobile.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.image-header::before {
+  content: "";
+  display: block;
   width: 100%;
   height: 100%;
+  position: absolute;
+  opacity: .6;
+  background-color: rgb(83, 13, 126);
 }
 
 /* Content =================================== */
 .content > h1 {
   color: var(--white);
+}
+
+.content > h1 > span {
+  color: var(--violet);
 }
 
 .content > p {
@@ -74,10 +92,6 @@ main {
   #card {
     width: 88%;
     height: 85vh;
-  }
-  .image-wrapper {
-    width: 100%;
-    height: auto;
   }
   .content {
     width: 80%;
