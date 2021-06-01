@@ -22,14 +22,13 @@ html {
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--bg-dark-blue);
   font-family: 'Inter', sans-serif;
 }
 
 main {
   width: 100%;
-  height: 100%;
 
   display: flex;
   justify-content: center;
@@ -58,7 +57,7 @@ main {
 }
 
 /* Content =================================== */
-.content-wrapper {
+.content-container {
   width: 100%;
 }
 .content > h1 {
@@ -74,7 +73,7 @@ main {
   line-height: 1.5rem;
 }
 
-.content > .stats-wrapper {
+.content > .stats-container {
   width: 100%;
   font-family: 'Inter', sans-serif;
   color: var(--light-gray);
@@ -108,6 +107,27 @@ main {
 .attribution a {
   color: var(--purple);
   text-decoration: none;
+
+  position: relative;
+}
+
+.attribution a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--purple);
+  transform: scaleX(0);
+
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+
+  transition: transform .4s;
+}
+
+.attribution a:hover::before {
+  transform: scaleX(1);
 }
 
 .attribution i {
@@ -116,6 +136,9 @@ main {
 
 /* Desktop Screen =================================== */
 @media (min-width: 651px) {
+  main {
+    height: 100vh;
+  }
   #card {
     width: min(100vw, 1000px);
     margin: 0 2rem;
@@ -133,7 +156,7 @@ main {
   .image-header::before {
     border-radius: 0 10px 10px 0;
   }
-  .content-wrapper {
+  .content-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -149,14 +172,14 @@ main {
     margin-left: 1rem;
   }
   .content > h1 {
-    font-size: 2.5rem;
+    font-size: min(4.5vw, 2.5rem);
     margin-bottom: 1.5rem;
   }
   .content > p {
     font-size: 1.1rem;
     margin-bottom: 6rem;
   }
-  .stats-wrapper {
+  .stats-container {
     display: flex;
     justify-content: space-between;
   }
@@ -164,11 +187,11 @@ main {
     margin: 0 1rem 1rem 1rem;
   }
   .stats > .stats-number {
-    font-size: 1.8rem;
+    font-size: min(3.5vw, 1.8rem);
     margin-bottom: .5rem;
   }
   .stats > .stats-name {
-    font-size: 1rem;
+    font-size: min(1.5vw, 1rem);
   }
 }
 
